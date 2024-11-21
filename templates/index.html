@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Detection - Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="upload-container" id="drop-zone">
+            <div class="upload-content">
+                <h2>Drag & Drop Files Here</h2>
+                <p>or click anywhere to upload</p>
+                <input type="file" id="fileInput" hidden accept=".png,.jpg,.jpeg,.pdf,.tiff">
+            </div>
+        </div>
+        <div class="viewer-container">
+            <div id="document-viewer">
+                <canvas id="viewer-canvas"></canvas>
+                <div id="selection-box"></div>
+            </div>
+            <div class="viewer-controls">
+                <button id="select-area" class="select-btn">Select Area</button>
+                <button id="prev-page">Previous</button>
+                <span id="page-info">Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+                <button id="next-page">Next</button>
+                <button id="extract-table" class="extract-btn">Extract Table</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
