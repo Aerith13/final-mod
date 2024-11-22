@@ -1,0 +1,24 @@
+# Virtual environments
+env/
+.env/
+.venv/
+venv/
+**/env/
+**/site-packages/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.dll
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Large files
+**/paddle/libs/
+**/paddle/base/
+**/cv2/
